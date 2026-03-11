@@ -15,6 +15,7 @@ import io.restassured.specification.ResponseSpecification;
 public class BaseAPIclass {
 	public JavaUtility jlib=new JavaUtility();
 	public FileUtility flib=new FileUtility();
+	public ExcelUtility excelUtility=new ExcelUtility();
 	
 	public static RequestSpecification spcReqobj;
 	public static ResponseSpecification spcRespobj;
@@ -31,7 +32,7 @@ public class BaseAPIclass {
 		   @BeforeClass
 		    public void config() {
 
-		        RestAssured.baseURI = "https://www.shoppersstack.com/shopping";
+		       // RestAssured.baseURI = "https://www.shoppersstack.com/shopping";
 		        RestAssured.useRelaxedHTTPSValidation();
 
 		 
