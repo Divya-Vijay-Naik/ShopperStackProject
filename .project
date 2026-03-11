@@ -24,7 +24,7 @@
 		<link>
 			<name>testdata/TestData.xlsx</name>
 			<type>1</type>
-			<location>C:/Users/User/Downloads/TestData.xlsx</location>
+			<location>C:/ShopperStackFrameWork/testdata/TestData.xlsx</location>
 		</link>
 	</linkedResources>
 </projectDescription>
