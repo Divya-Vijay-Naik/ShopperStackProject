@@ -2,5 +2,6 @@ package constantEndpoints;
 
 public interface IEndPoints {
 
-	public String AddProject="/addProject";
+	public String GetAddress="/shoppers/{shopperId}/address";
+	public String GetParticularAddress="/shoppers/{shopperId}/address/{addressId}";
 }
