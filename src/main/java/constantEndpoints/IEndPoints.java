@@ -9,5 +9,7 @@ public interface IEndPoints {
 	    String GET_SHOPPER="/shoppers/{shopperId}";
 
 	    String UPDATE_SHOPPER="/shoppers/{shopperId}";
+	    
+	    String DELETE_SHOPPER = "/shoppers/{shopperId}";
 
 }
