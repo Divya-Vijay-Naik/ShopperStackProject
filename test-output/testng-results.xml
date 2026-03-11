@@ -1,77 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="0" failed="1" skipped="3">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2026-03-11T12:12:57 IST" name="Default suite" finished-at="2026-03-11T12:13:01 IST" duration-ms="3381">
-=======
-<<<<<<< HEAD
-  <suite started-at="2026-03-11T11:59:11 IST" name="Default suite" finished-at="2026-03-11T11:59:13 IST" duration-ms="2394">
-=======
-  <suite started-at="2026-03-11T11:49:22 IST" name="Default suite" finished-at="2026-03-11T11:49:24 IST" duration-ms="2233">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+  <suite started-at="2026-03-11T14:04:23 IST" name="Default suite" finished-at="2026-03-11T14:04:28 IST" duration-ms="4422">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test started-at="2026-03-11T12:12:57 IST" name="Default test" finished-at="2026-03-11T12:13:01 IST" duration-ms="3381">
-      <class name="ShopperLogin.RegisterShopperTest">
-        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.RegisterShopperTest@d35dea7]" started-at="2026-03-11T12:12:57 IST" name="configDB" finished-at="2026-03-11T12:12:57 IST" duration-ms="670" status="PASS">
-=======
-<<<<<<< HEAD
-    <test started-at="2026-03-11T11:59:11 IST" name="Default test" finished-at="2026-03-11T11:59:13 IST" duration-ms="2394">
-      <class name="ShopperLogin.ShopperStackAddress">
-        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:10 IST" name="configDB" finished-at="2026-03-11T11:59:11 IST" duration-ms="607" status="PASS">
-=======
-    <test started-at="2026-03-11T11:49:22 IST" name="Default test" finished-at="2026-03-11T11:49:24 IST" duration-ms="2233">
-      <class name="ShopperLogin.DeleteShopperTest">
-        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:21 IST" name="configDB" finished-at="2026-03-11T11:49:22 IST" duration-ms="570" status="PASS">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+    <test started-at="2026-03-11T14:04:23 IST" name="Default test" finished-at="2026-03-11T14:04:28 IST" duration-ms="4422">
+      <class name="ShopperLogin.CartModuleTest">
+        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.CartModuleTest@5e5d171f]" started-at="2026-03-11T14:04:22 IST" name="configDB" finished-at="2026-03-11T14:04:23 IST" duration-ms="1059" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configDB -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.RegisterShopperTest@d35dea7]" started-at="2026-03-11T12:12:57 IST" name="config" finished-at="2026-03-11T12:12:58 IST" duration-ms="190" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:11 IST" name="config" finished-at="2026-03-11T11:59:11 IST" duration-ms="122" status="PASS">
-=======
-        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:22 IST" name="config" finished-at="2026-03-11T11:49:22 IST" duration-ms="105" status="PASS">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.CartModuleTest@5e5d171f]" started-at="2026-03-11T14:04:23 IST" name="config" finished-at="2026-03-11T14:04:24 IST" duration-ms="179" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-<<<<<<< HEAD
-        <test-method signature="registerShopperTest()[pri:0, instance:ShopperLogin.RegisterShopperTest@d35dea7]" started-at="2026-03-11T12:12:58 IST" name="registerShopperTest" finished-at="2026-03-11T12:13:01 IST" duration-ms="3155" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method signature="testGetShopperAddresses_JSON()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:11 IST" name="testGetShopperAddresses_JSON" finished-at="2026-03-11T11:59:13 IST" duration-ms="2232" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="getCartItems()[pri:1, instance:ShopperLogin.CartModuleTest@5e5d171f]" started-at="2026-03-11T14:04:24 IST" name="getCartItems" finished-at="2026-03-11T14:04:28 IST" duration-ms="4137" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[1 expectation failed.
-Expected status code <201> but was <403>.
-]]>
+              <![CDATA[Cannot invoke "java.lang.Integer.intValue()" because the return value of "io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <201> but was <403>.
-
-at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
-at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)
-at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)
-at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)
-at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at ShopperLogin.ShopperStackAddress.testGetShopperAddresses_JSON(ShopperStackAddress.java:52)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)" is null
+at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
+at ShopperLogin.CartModuleTest.getCartItems(CartModuleTest.java:33)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
@@ -80,7 +34,7 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
@@ -98,37 +52,117 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-=======
-        <test-method signature="deleteShopperTest()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:22 IST" name="deleteShopperTest" finished-at="2026-03-11T11:49:24 IST" duration-ms="2084" status="PASS">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- registerShopperTest -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.RegisterShopperTest@d35dea7]" started-at="2026-03-11T12:13:01 IST" name="aftersuite" finished-at="2026-03-11T12:13:01 IST" duration-ms="0" status="PASS">
-=======
-<<<<<<< HEAD
-        </test-method> <!-- testGetShopperAddresses_JSON -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:13 IST" name="aftersuite" finished-at="2026-03-11T11:59:13 IST" duration-ms="1" status="PASS">
-=======
-        </test-method> <!-- deleteShopperTest -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:24 IST" name="aftersuite" finished-at="2026-03-11T11:49:24 IST" duration-ms="1" status="PASS">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+        </test-method> <!-- getCartItems -->
+        <test-method signature="addCartItem()[pri:2, instance:ShopperLogin.CartModuleTest@5e5d171f]" started-at="2026-03-11T14:04:28 IST" name="addCartItem" finished-at="2026-03-11T14:04:28 IST" depends-on-methods="ShopperLogin.CartModuleTest.getCartItems" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ShopperLogin.CartModuleTest.addCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f depends on not successfully finished methods 
+[ShopperLogin.CartModuleTest.getCartItems() on instance ShopperLogin.CartModuleTest@5e5d171f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ShopperLogin.CartModuleTest.addCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f depends on not successfully finished methods 
+[ShopperLogin.CartModuleTest.getCartItems() on instance ShopperLogin.CartModuleTest@5e5d171f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCartItem -->
+        <test-method signature="updateCartItem()[pri:3, instance:ShopperLogin.CartModuleTest@5e5d171f]" started-at="2026-03-11T14:04:28 IST" name="updateCartItem" finished-at="2026-03-11T14:04:28 IST" depends-on-methods="ShopperLogin.CartModuleTest.addCartItem" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ShopperLogin.CartModuleTest.updateCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f depends on not successfully finished methods 
+[ShopperLogin.CartModuleTest.addCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ShopperLogin.CartModuleTest.updateCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f depends on not successfully finished methods 
+[ShopperLogin.CartModuleTest.addCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCartItem -->
+        <test-method signature="deleteCartItem()[pri:4, instance:ShopperLogin.CartModuleTest@5e5d171f]" started-at="2026-03-11T14:04:28 IST" name="deleteCartItem" finished-at="2026-03-11T14:04:28 IST" depends-on-methods="ShopperLogin.CartModuleTest.updateCartItem" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ShopperLogin.CartModuleTest.deleteCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f depends on not successfully finished methods 
+[ShopperLogin.CartModuleTest.updateCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ShopperLogin.CartModuleTest.deleteCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f depends on not successfully finished methods 
+[ShopperLogin.CartModuleTest.updateCartItem() on instance ShopperLogin.CartModuleTest@5e5d171f]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCartItem -->
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.CartModuleTest@5e5d171f]" started-at="2026-03-11T14:04:28 IST" name="aftersuite" finished-at="2026-03-11T14:04:28 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
-<<<<<<< HEAD
-      </class> <!-- ShopperLogin.RegisterShopperTest -->
-=======
-<<<<<<< HEAD
-      </class> <!-- ShopperLogin.ShopperStackAddress -->
-=======
-      </class> <!-- ShopperLogin.DeleteShopperTest -->
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+      </class> <!-- ShopperLogin.CartModuleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

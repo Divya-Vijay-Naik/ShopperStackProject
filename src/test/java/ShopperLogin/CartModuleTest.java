@@ -10,11 +10,37 @@ import static io.restassured.RestAssured.given;
 
 public class CartModuleTest extends BaseAPIclass {
 
-    @Test(priority = 1)
-    public void addCartItem() throws Exception {
-        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
-        int productId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 1));
-        int quantity  = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 2));
+	@Test(priority = 1)
+	public void getCartItems() throws Throwable {
+	    int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 1, 0));
+	    String jwtToken = excelUtility.getDataFromExcel("Sheet1", 1, 1);
+
+	    Response getResponse = given()
+	            .spec(spcReqobj)
+	            .header("Authorization", "Bearer " + jwtToken)
+	            .pathParam("shopperId", shopperId)
+	            .when()
+	            .get(IEndPoints.ShopperCart)
+	            .then()
+	            .extract().response();
+
+	    System.out.println("Status: " + getResponse.getStatusCode());
+	    System.out.println("Headers: " + getResponse.getHeaders());
+	    System.out.println("Cart contents: " + getResponse.asString());
+
+	    // Only proceed if JSON is returned
+	    if (getResponse.getContentType() != null && getResponse.getContentType().contains("application/json")) {
+	        int productId = getResponse.jsonPath().getInt("products[0].productId");
+	        excelUtility.writeDataIntoExcel("Sheet1", 4, 0, String.valueOf(productId));
+	    } else {
+	        throw new RuntimeException("Expected JSON but got: " + getResponse.getContentType());
+	    }
+	}
+    @Test(priority = 2, dependsOnMethods = "getCartItems")
+    public void addCartItem() throws Throwable {
+        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 1, 0));
+        int productId = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 4, 0));
+        int quantity  = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 4, 1));
 
         String requestBody = String.format("{ \"productId\": %d, \"quantity\": %d }", productId, quantity);
 
@@ -30,30 +56,18 @@ public class CartModuleTest extends BaseAPIclass {
                 .extract().response();
 
         System.out.println("Add item response: " + postResponse.asString());
+
+        // Extract itemId from POST response and write to row 5 col 2 (ItemId)
+        int itemId = postResponse.jsonPath().getInt("itemId");
+        excelUtility.writeDataIntoExcel("Sheet1", 4, 2, String.valueOf(itemId));
     }
 
-    @Test(priority = 2)
-    public void getCartItems() throws Exception {
-        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
-
-        Response getResponse = given()
-                .spec(spcReqobj)
-                .pathParam("shopperId", shopperId)
-                .when()
-                .get(IEndPoints.ShopperCart)
-                .then()
-                .spec(spcRespobj)
-                .extract().response();
-
-        System.out.println("Cart contents: " + getResponse.asString());
-    }
-
-    @Test(priority = 3)
+    @Test(priority = 3, dependsOnMethods = "addCartItem")
     public void updateCartItem() throws Exception {
-        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
-        int productId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 1));
-        int quantity  = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 2));
-        int itemId    = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 3));
+        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 1, 0));
+        int productId = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 4, 0));
+        int quantity  = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 4, 1));
+        int itemId    = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 4, 2));
 
         String updateBody = String.format("{ \"productId\": %d, \"quantity\": %d }", productId, quantity);
 
@@ -71,10 +85,10 @@ public class CartModuleTest extends BaseAPIclass {
         System.out.println("Update response: " + putResponse.asString());
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, dependsOnMethods = "updateCartItem")
     public void deleteCartItem() throws Exception {
-        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
-        int productId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 1));
+        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 1, 0));
+        int productId = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 4, 0));
 
         Response deleteResponse = given()
                 .spec(spcReqobj)
