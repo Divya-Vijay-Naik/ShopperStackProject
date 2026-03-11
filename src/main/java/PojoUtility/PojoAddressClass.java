@@ -1,17 +1,17 @@
 package PojoUtility;
 
-public class PojoClass {
+public class PojoAddressClass {
 	
 	String projectName;
 	String status;
 	String createdBy;
 	int teamsize;
 
-	public PojoClass()
+	public PojoAddressClass()
 	{
 		
 	}
-	public PojoClass(String projectName, String status, String createdBy, int teamsize) {
+	public PojoAddressClass(String projectName, String status, String createdBy, int teamsize) {
 		super();
 		this.projectName = projectName;
 		this.status = status;
