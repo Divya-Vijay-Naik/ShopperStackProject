@@ -2,8 +2,6 @@ package constantEndpoints;
 
 public interface IEndPoints {
 
-	  String BASE_URI="https://www.shoppersstack.com/shopping";
-
 	    String REGISTER_SHOPPER="/shoppers";
 
 	    String LOGIN="/users/login";
@@ -11,5 +9,7 @@ public interface IEndPoints {
 	    String GET_SHOPPER="/shoppers/{shopperId}";
 
 	    String UPDATE_SHOPPER="/shoppers/{shopperId}";
+	    
+	    String DELETE_SHOPPER = "/shoppers/{shopperId}";
 
 }
