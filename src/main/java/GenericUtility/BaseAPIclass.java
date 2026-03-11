@@ -32,7 +32,7 @@ public class BaseAPIclass {
 		   @BeforeClass
 		    public void config() {
 
-		        RestAssured.baseURI = "https://www.shoppersstack.com/shopping";
+		       // RestAssured.baseURI = "https://www.shoppersstack.com/shopping";
 		        RestAssured.useRelaxedHTTPSValidation();
 
 		 

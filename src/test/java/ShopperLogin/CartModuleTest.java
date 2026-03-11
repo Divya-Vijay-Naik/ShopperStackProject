@@ -1,7 +1,6 @@
 package ShopperLogin;
 
 import GenericUtility.BaseAPIclass;
-import GenericUtility.ExcelUtility;
 import constantEndpoints.IEndPoints;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -11,23 +10,7 @@ import static io.restassured.RestAssured.given;
 
 public class CartModuleTest extends BaseAPIclass {
 
-    @Test
-    public void getCartItems() throws Exception {
-        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
-
-        Response getResponse = given()
-                .spec(spcReqobj)
-                .pathParam("shopperId", shopperId)
-                .when()
-                .get(IEndPoints.ShopperCart)
-                .then()
-                .spec(spcRespobj)
-                .extract().response();
-
-        System.out.println("Cart contents: " + getResponse.asString());
-    }
-
-    @Test
+    @Test(priority = 1)
     public void addCartItem() throws Exception {
         int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
         int productId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 1));
@@ -49,7 +32,23 @@ public class CartModuleTest extends BaseAPIclass {
         System.out.println("Add item response: " + postResponse.asString());
     }
 
-    @Test
+    @Test(priority = 2)
+    public void getCartItems() throws Exception {
+        int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
+
+        Response getResponse = given()
+                .spec(spcReqobj)
+                .pathParam("shopperId", shopperId)
+                .when()
+                .get(IEndPoints.ShopperCart)
+                .then()
+                .spec(spcRespobj)
+                .extract().response();
+
+        System.out.println("Cart contents: " + getResponse.asString());
+    }
+
+    @Test(priority = 3)
     public void updateCartItem() throws Exception {
         int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
         int productId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 1));
@@ -72,7 +71,7 @@ public class CartModuleTest extends BaseAPIclass {
         System.out.println("Update response: " + putResponse.asString());
     }
 
-    @Test
+    @Test(priority = 4)
     public void deleteCartItem() throws Exception {
         int shopperId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 0));
         int productId = Integer.parseInt(excelUtility.getDataFromExcel("CartData", 1, 1));
