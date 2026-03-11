@@ -1,0 +1,40 @@
+package GenericUtility;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import GenericUtility.FileUtility;
+import GenericUtility.JavaUtility;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+
+public class BaseAPIclass {
+	public JavaUtility jlib=new JavaUtility();
+	public FileUtility flib=new FileUtility();
+	
+	public static RequestSpecification spcReqobj;
+	public static ResponseSpecification spcRespobj;
+
+	@BeforeSuite
+	public void configDB() throws Exception
+	{
+		System.out.println("Before suite DB connection");
+		RequestSpecBuilder req=new RequestSpecBuilder();
+		req.setContentType(ContentType.JSON);
+		req.setBaseUri(flib.getDataFromProperties("BASEUri"));
+		 spcReqobj = req.build();
+		 
+		 
+		 ResponseSpecBuilder resp=new ResponseSpecBuilder();
+		 resp.expectContentType(ContentType.JSON);
+		 spcRespobj=resp.build();
+	}
+	
+	@AfterSuite
+	public void aftersuite()
+	{
+		System.out.println("Aftersuite Close DB connection");
+	}
+}
