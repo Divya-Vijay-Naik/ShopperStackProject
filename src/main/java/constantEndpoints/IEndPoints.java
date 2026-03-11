@@ -2,26 +2,23 @@ package constantEndpoints;
 
 public interface IEndPoints {
 
-<<<<<<< HEAD
-=======
-
-
-	public String AddProject="/addProject";
 	public String ShopperCart ="/shoppers/{shopperId}/carts";
 	public String ShopperCartPut="/shoppers/{shopperId}/carts/{itemId}";
+	
 
-
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+//>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 
 	public String GetAddress="/shoppers/{shopperId}/address";
 	public String GetParticularAddress="/shoppers/{shopperId}/address/{addressId}";
+	public String GetProductFromWishlist="/shoppers/{shopperId}/wishlist";
+	public String DeleteProductFromWishlist="/shoppers/{shopperId}/wishlist/{productId}";
+	public String GetProductReview="/reviews/{productId}";
+	public String AddProductReview="/reviews";
+	public String UpdateProductReview="/reviews/{reviewId}";
 
-	  String BASE_URI="https://www.shoppersstack.com/shopping";
 
-<<<<<<< HEAD
 //>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
-=======
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+
 
 	    String REGISTER_SHOPPER="/shoppers";
 

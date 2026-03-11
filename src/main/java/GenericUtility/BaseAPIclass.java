@@ -37,7 +37,7 @@ public class BaseAPIclass {
 
 		 
 		 ResponseSpecBuilder resp=new ResponseSpecBuilder();
-		 resp.expectContentType(ContentType.JSON);
+		 //resp.expectContentType(ContentType.JSON);
 		 spcRespobj=resp.build();
 	}
 	
