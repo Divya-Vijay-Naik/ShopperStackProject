@@ -1,6 +1,7 @@
 package GenericUtility;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
@@ -30,5 +31,26 @@ public class ExcelUtility {
         wb.close();
         return rowCount;
     }
+	
+	public void writeDataIntoExcel(String sheetName, int rowNum, int cellNum, String data) throws Throwable
+	{
+	    FileInputStream fis = new FileInputStream("C:\\Users\\User\\Downloads\\TestData.xlsx");
+	    Workbook wb = WorkbookFactory.create(fis);
 
+	    Sheet sh = wb.getSheet(sheetName);
+
+	    Row row = sh.getRow(rowNum);
+	    if(row == null)
+	    {
+	        row = sh.createRow(rowNum);
+	    }
+
+	    Cell cell = row.createCell(cellNum);
+	    cell.setCellValue(data);
+
+	    FileOutputStream fos = new FileOutputStream("C:\\Users\\User\\Downloads\\TestData.xlsx");
+	    wb.write(fos);
+
+	    wb.close();
+	}
 }

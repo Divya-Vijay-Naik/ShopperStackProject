@@ -1,9 +1,11 @@
 package GenericUtility;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import GenericUtility.FileUtility;
 import GenericUtility.JavaUtility;
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -25,7 +27,13 @@ public class BaseAPIclass {
 		req.setContentType(ContentType.JSON);
 		req.setBaseUri(flib.getDataFromProperties("BASEUri"));
 		 spcReqobj = req.build();
-		 
+	}
+		   @BeforeClass
+		    public void config() {
+
+		        RestAssured.baseURI = "https://www.shoppersstack.com/shopping";
+		        RestAssured.useRelaxedHTTPSValidation();
+
 		 
 		 ResponseSpecBuilder resp=new ResponseSpecBuilder();
 		 resp.expectContentType(ContentType.JSON);
