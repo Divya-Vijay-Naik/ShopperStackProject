@@ -13,7 +13,8 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtility {
 
-	String filepath="C:\\Users\\User\\Downloads\\TestData.xlsx";
+	String projectPath = System.getProperty("user.dir");
+	String filepath=projectPath+"/testdata/TestData.xlsx";
 	
 	public String getDataFromExcel(String sheetName, int rowNum, int colNum) throws EncryptedDocumentException, IOException {
 		FileInputStream fileInputStream=new FileInputStream(filepath);
