@@ -1,5 +1,0 @@
-package ShopperLogin;
-
-public class ShooperLogin {
-
-}
