@@ -16,34 +16,46 @@ import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
 import org.hamcrest.Matchers;
 
 public class ShopperStackAddress extends BaseAPIclass {
 		PojoAddressClass pojo;
-		    @Test
-		    public void testGetShopperAddresses_JSON() {
+		String token="";
+		String shopperId="";
+		String addressId="";
+		    @Test(priority = 1)
+		    public void AddShopperAddresseTest() throws Throwable {
 		        //RestAssured.baseURI = "http://your-api-base-url.com"; // replace with actual base URL
+		    	token=excelUtility.getDataFromExcel("Sheet1", 1, 1);
+		    	shopperId = excelUtility.getDataFromExcel("Sheet1", 1, 0); // replace with actual shopperId
+		       
+		    	int addressIds = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 7, 1));
+		        String buildingInfo = excelUtility.getDataFromExcel("Sheet1", 7, 2);
+		        String city = excelUtility.getDataFromExcel("Sheet1", 7, 3);
+		        String country = excelUtility.getDataFromExcel("Sheet1", 7, 4);
+		        String landmark = excelUtility.getDataFromExcel("Sheet1", 7, 5);
+		        String name = excelUtility.getDataFromExcel("Sheet1", 7, 6);
+		        String phone = excelUtility.getDataFromExcel("Sheet1", 7, 7);
+		        String pincode = excelUtility.getDataFromExcel("Sheet1", 7, 8);
+		        String state = excelUtility.getDataFromExcel("Sheet1", 7, 9);
+		        String streetInfo = excelUtility.getDataFromExcel("Sheet1", 7, 10);
+		        String type = excelUtility.getDataFromExcel("Sheet1", 7, 11);
 
-		    	
-		        int shopperId = 354095; // replace with actual shopperId
-		        pojo=new PojoAddressClass(
-		        		 0,
-		        	        "Building A",
-		        	        "Bengaluru",
-		        	        "India",
-		        	        "Near Park",
-		        	        "Deepika",
-		        	        "9876543210",
-		        	        "560001",
-		        	        "Karnataka",
-		        	        "MG Road",
-		        	        "Home"
-		        		);
+		        PojoAddressClass pojo = new PojoAddressClass(
+		                addressIds, buildingInfo, city, country, landmark,
+		                name, phone, pincode, state, streetInfo, type
+		            );
+
+		        
 		        RestAssured.useRelaxedHTTPSValidation();
 
 		        Response resp = given()
 		                .spec(spcReqobj)
 		                .pathParam("shopperId", shopperId)
+		                .header("Authorization", "Bearer " + token)
 		                .body(pojo)
 		                .when()
 		                .post(IEndPoints.GetAddress);
@@ -56,40 +68,130 @@ public class ShopperStackAddress extends BaseAPIclass {
 
 		        String addressId = resp.jsonPath().getString("data.addressId");
 		        System.out.println("Created Address ID: " + addressId);
-		        		
+		        excelUtility.writeDataIntoExcel("Sheet1",7 ,0, addressId);		
 		    }
 
-		    @Test
-		    public void testGetShopperAddresses_XML() {
+		    @Test(priority = 2)
+		    public void GetShopperAddressesTest() throws EncryptedDocumentException, IOException {
 		        //RestAssured.baseURI = "http://your-api-base-url.com"; // replace with actual base URL
 
-		        int shopperId = 123; // replace with actual shopperId
+		    	shopperId = excelUtility.getDataFromExcel("Sheet1", 1, 0);
+		    	token=excelUtility.getDataFromExcel("Sheet1", 1, 1);
 
-//		        Response response = given()
-//		            .pathParam("shopperId", shopperId)
-//		            .accept(ContentType.XML)
-//		        .when()
-//		            .get("/shoppers/{shopperId}/address");
-//
-//		        response.then()
-//		            .statusCode(200)
-//		            .contentType(ContentType.XML);
-//
-//		        // Example: extract values from XML
-//		        String city = response.xmlPath().getString("ResponseStructure.data.city");
-//		        System.out.println("City: " + city);
 		        Response resp = given()
 		                .spec(spcReqobj)
 		                .pathParam("shopperId", shopperId)
-		                .body(pojo)
+		                .header("Authorization", "Bearer " + token)
+		                //.body(pojo)
 		                .when()
-		                .post(IEndPoints.GetAddress);
+		                .get(IEndPoints.GetAddress);
 
 		        resp.then()
 		                .assertThat().statusCode(200)
 		        	.spec(spcRespobj)
 		        	.log().all();
 		    }
+		    
+		   
+		    
+		    @Test(priority = 3)
+		    public void UpdateAddress() throws Throwable
+		    {
+		    	token=excelUtility.getDataFromExcel("Sheet1", 1, 1);
+		    	String randomno=jlib.getRandomString(10);
+		    	addressId=excelUtility.getDataFromExcel("Sheet1", 7, 0);
+		        shopperId = excelUtility.getDataFromExcel("Sheet1", 1, 0); // replace with actual shopperId
+		        
+		        int addressIds = Integer.parseInt(excelUtility.getDataFromExcel("Sheet1", 7, 1));
+		        String buildingInfo = excelUtility.getDataFromExcel("Sheet1", 7, 2);
+		        String city = excelUtility.getDataFromExcel("Sheet1", 7, 3);
+		        String country = excelUtility.getDataFromExcel("Sheet1", 7, 4);
+		        String landmark = excelUtility.getDataFromExcel("Sheet1", 7, 5);
+		        String name = excelUtility.getDataFromExcel("Sheet1", 7, 6);
+		        String phone = excelUtility.getDataFromExcel("Sheet1", 7, 7);
+		        String pincode = excelUtility.getDataFromExcel("Sheet1", 7, 8);
+		        String state = excelUtility.getDataFromExcel("Sheet1", 7, 9);
+		        String streetInfo = excelUtility.getDataFromExcel("Sheet1", 7, 10);
+		        String type = excelUtility.getDataFromExcel("Sheet1", 7, 11);
+
+		        PojoAddressClass pojo = new PojoAddressClass(
+		                addressIds, buildingInfo+randomno, city, country, landmark,
+		                name, phone, pincode, state, streetInfo, type
+		            );
+
+		        
+		        RestAssured.useRelaxedHTTPSValidation();
+
+		        Response resp = given()
+		                .spec(spcReqobj)
+		                .pathParam("shopperId", shopperId)
+		                .pathParam("addressId", addressId)
+		                .header("Authorization", "Bearer " + token)
+		                .body(pojo)
+		                .when()
+		                .put(IEndPoints.GetParticularAddress);
+
+		        resp.then()
+		                .assertThat().statusCode(200) // POST should return 201 Created
+		                .assertThat().time(Matchers.lessThan(3000L))
+		                .spec(spcRespobj)
+		                .log().all();
+
+		        String buildlinginfo = resp.jsonPath().getString("data.buildingInfo");
+		        System.out.println("Updated: " + buildingInfo);
+		        excelUtility.writeDataIntoExcel("Sheet1",7 ,12,buildingInfo);
+		    }
+		    
+		    @Test(priority = 4)
+		    public void GetParticularShopperAddressesTest() throws EncryptedDocumentException, IOException {
+		        //RestAssured.baseURI = "http://your-api-base-url.com"; // replace with actual base URL
+
+		    	shopperId = excelUtility.getDataFromExcel("Sheet1", 1, 0);
+		    	token=excelUtility.getDataFromExcel("Sheet1", 1, 1);
+		    	addressId=excelUtility.getDataFromExcel("Sheet1", 7, 0);
+
+		        Response resp = given()
+		                .spec(spcReqobj)
+		                .pathParam("shopperId", shopperId)
+		                .pathParam("addressId", addressId)
+		                .header("Authorization", "Bearer " + token)
+		                //.body(pojo)
+		                .when()
+		                .get(IEndPoints.GetParticularAddress);
+
+		        resp.then()
+		                .assertThat().statusCode(200)
+		        	.spec(spcRespobj)
+		        	.log().all();
+		    }
+		    
+		    
+		    @Test(priority = 5)
+		    public void DeleteAddress() throws EncryptedDocumentException, IOException
+		    {
+		    token=excelUtility.getDataFromExcel("Sheet1", 1, 1);
+		    shopperId=excelUtility.getDataFromExcel("Sheet1", 1, 0);
+		    addressId=excelUtility.getDataFromExcel("Sheet1", 7, 0);
+		    	Response resp = given()
+		                .spec(spcReqobj)
+		                .pathParam("shopperId", shopperId)
+		                .pathParam("addressId", addressId)
+		                .header("Authorization", "Bearer " + token)
+		              //  .body(pojo)
+		                .when()
+		                .delete(IEndPoints.GetParticularAddress);
+
+		        resp.then()
+		              .assertThat().statusCode(204) // POST should return 201 Created
+		                .assertThat().time(Matchers.lessThan(3000L))
+		                .spec(spcRespobj)
+		                .log().all();
+		        
+		        System.out.println("Successfully Deleted");
+
+
+		    }
+		     
 		
 	}
 

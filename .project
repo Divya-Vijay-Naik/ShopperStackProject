@@ -20,11 +20,17 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 	<linkedResources>
 		<link>
 			<name>testdata/TestData.xlsx</name>
 			<type>1</type>
-			<location>C:/Users/User/Downloads/TestData.xlsx</location>
+			<location>C:/ShopperStackFrameWork/testdata/TestData.xlsx</location>
 		</link>
 	</linkedResources>
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+=======
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 </projectDescription>

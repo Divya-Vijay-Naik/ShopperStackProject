@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
 <<<<<<< HEAD
-  <suite started-at="2026-03-11T11:59:11 IST" name="Default suite" finished-at="2026-03-11T11:59:13 IST" duration-ms="2394">
+  <suite started-at="2026-03-11T16:14:06 IST" name="Default suite" finished-at="2026-03-11T16:14:09 IST" duration-ms="2515">
 =======
-  <suite started-at="2026-03-11T11:49:22 IST" name="Default suite" finished-at="2026-03-11T11:49:24 IST" duration-ms="2233">
+  <suite started-at="2026-03-11T15:06:04 IST" name="Default suite" finished-at="2026-03-11T15:06:15 IST" duration-ms="11777">
 >>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
     <groups>
     </groups>
 <<<<<<< HEAD
-    <test started-at="2026-03-11T11:59:11 IST" name="Default test" finished-at="2026-03-11T11:59:13 IST" duration-ms="2394">
-      <class name="ShopperLogin.ShopperStackAddress">
-        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:10 IST" name="configDB" finished-at="2026-03-11T11:59:11 IST" duration-ms="607" status="PASS">
+    <test started-at="2026-03-11T16:14:06 IST" name="Default test" finished-at="2026-03-11T16:14:09 IST" duration-ms="2515">
+      <class name="ShopperLogin.ShopperStackProductReview">
+        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.ShopperStackProductReview@6c40365c]" started-at="2026-03-11T16:14:06 IST" name="configDB" finished-at="2026-03-11T16:14:06 IST" duration-ms="524" status="PASS">
 =======
-    <test started-at="2026-03-11T11:49:22 IST" name="Default test" finished-at="2026-03-11T11:49:24 IST" duration-ms="2233">
-      <class name="ShopperLogin.DeleteShopperTest">
-        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:21 IST" name="configDB" finished-at="2026-03-11T11:49:22 IST" duration-ms="570" status="PASS">
+    <test started-at="2026-03-11T15:06:04 IST" name="Default test" finished-at="2026-03-11T15:06:15 IST" duration-ms="11777">
+      <class name="ShopperLogin.CartModuleTest">
+        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:03 IST" name="configDB" finished-at="2026-03-11T15:06:04 IST" duration-ms="898" status="PASS">
 >>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configDB -->
 <<<<<<< HEAD
-        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:11 IST" name="config" finished-at="2026-03-11T11:59:11 IST" duration-ms="122" status="PASS">
+        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.ShopperStackProductReview@6c40365c]" started-at="2026-03-11T16:14:06 IST" name="config" finished-at="2026-03-11T16:14:07 IST" duration-ms="99" status="PASS">
 =======
-        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:22 IST" name="config" finished-at="2026-03-11T11:49:22 IST" duration-ms="105" status="PASS">
+        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:04 IST" name="config" finished-at="2026-03-11T15:06:04 IST" duration-ms="204" status="PASS">
 >>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
 <<<<<<< HEAD
-        <test-method signature="testGetShopperAddresses_JSON()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:11 IST" name="testGetShopperAddresses_JSON" finished-at="2026-03-11T11:59:13 IST" duration-ms="2232" status="FAIL">
+        <test-method signature="AddProductReviewTest()[pri:0, instance:ShopperLogin.ShopperStackProductReview@6c40365c]" started-at="2026-03-11T16:14:07 IST" name="AddProductReviewTest" finished-at="2026-03-11T16:14:09 IST" duration-ms="2374" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
-Expected status code <201> but was <403>.
+Expected status code <200> but was <500>.
 ]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <201> but was <403>.
+Expected status code <200> but was <500>.
 
 at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
 at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
@@ -50,7 +50,7 @@ at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecific
 at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
 at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)
 at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at ShopperLogin.ShopperStackAddress.testGetShopperAddresses_JSON(ShopperStackAddress.java:52)
+at ShopperLogin.ShopperStackProductReview.AddProductReviewTest(ShopperStackProductReview.java:58)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -83,24 +83,40 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
 =======
-        <test-method signature="deleteShopperTest()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:22 IST" name="deleteShopperTest" finished-at="2026-03-11T11:49:24 IST" duration-ms="2084" status="PASS">
+        <test-method signature="getProductId()[pri:1, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:04 IST" name="getProductId" finished-at="2026-03-11T15:06:13 IST" duration-ms="8715" status="PASS">
 >>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <reporter-output>
           </reporter-output>
 <<<<<<< HEAD
-        </test-method> <!-- testGetShopperAddresses_JSON -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:13 IST" name="aftersuite" finished-at="2026-03-11T11:59:13 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- AddProductReviewTest -->
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.ShopperStackProductReview@6c40365c]" started-at="2026-03-11T16:14:09 IST" name="aftersuite" finished-at="2026-03-11T16:14:09 IST" duration-ms="0" status="PASS">
 =======
-        </test-method> <!-- deleteShopperTest -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:24 IST" name="aftersuite" finished-at="2026-03-11T11:49:24 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- getProductId -->
+        <test-method signature="addCartItem()[pri:2, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:13 IST" name="addCartItem" finished-at="2026-03-11T15:06:13 IST" duration-ms="802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCartItem -->
+        <test-method signature="getCartItems()[pri:3, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:13 IST" name="getCartItems" finished-at="2026-03-11T15:06:14 IST" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCartItems -->
+        <test-method signature="updateCartItem()[pri:4, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:14 IST" name="updateCartItem" finished-at="2026-03-11T15:06:15 IST" depends-on-methods="ShopperLogin.CartModuleTest.addCartItem" duration-ms="673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCartItem -->
+        <test-method signature="deleteCartItem()[pri:5, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:15 IST" name="deleteCartItem" finished-at="2026-03-11T15:06:15 IST" duration-ms="679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCartItem -->
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:15 IST" name="aftersuite" finished-at="2026-03-11T15:06:15 IST" duration-ms="1" status="PASS">
 >>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
 <<<<<<< HEAD
-      </class> <!-- ShopperLogin.ShopperStackAddress -->
+      </class> <!-- ShopperLogin.ShopperStackProductReview -->
 =======
-      </class> <!-- ShopperLogin.DeleteShopperTest -->
+      </class> <!-- ShopperLogin.CartModuleTest -->
 >>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
