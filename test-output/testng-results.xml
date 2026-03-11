@@ -2,19 +2,34 @@
 <testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2026-03-11T11:59:11 IST" name="Default suite" finished-at="2026-03-11T11:59:13 IST" duration-ms="2394">
+=======
+  <suite started-at="2026-03-11T11:49:22 IST" name="Default suite" finished-at="2026-03-11T11:49:24 IST" duration-ms="2233">
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-03-11T11:59:11 IST" name="Default test" finished-at="2026-03-11T11:59:13 IST" duration-ms="2394">
       <class name="ShopperLogin.ShopperStackAddress">
         <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:10 IST" name="configDB" finished-at="2026-03-11T11:59:11 IST" duration-ms="607" status="PASS">
+=======
+    <test started-at="2026-03-11T11:49:22 IST" name="Default test" finished-at="2026-03-11T11:49:24 IST" duration-ms="2233">
+      <class name="ShopperLogin.DeleteShopperTest">
+        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:21 IST" name="configDB" finished-at="2026-03-11T11:49:22 IST" duration-ms="570" status="PASS">
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configDB -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:11 IST" name="config" finished-at="2026-03-11T11:59:11 IST" duration-ms="122" status="PASS">
+=======
+        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:22 IST" name="config" finished-at="2026-03-11T11:49:22 IST" duration-ms="105" status="PASS">
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
+<<<<<<< HEAD
         <test-method signature="testGetShopperAddresses_JSON()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:11 IST" name="testGetShopperAddresses_JSON" finished-at="2026-03-11T11:59:13 IST" duration-ms="2232" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
@@ -67,14 +82,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
+=======
+        <test-method signature="deleteShopperTest()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:22 IST" name="deleteShopperTest" finished-at="2026-03-11T11:49:24 IST" duration-ms="2084" status="PASS">
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- testGetShopperAddresses_JSON -->
         <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:13 IST" name="aftersuite" finished-at="2026-03-11T11:59:13 IST" duration-ms="1" status="PASS">
+=======
+        </test-method> <!-- deleteShopperTest -->
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.DeleteShopperTest@d35dea7]" started-at="2026-03-11T11:49:24 IST" name="aftersuite" finished-at="2026-03-11T11:49:24 IST" duration-ms="1" status="PASS">
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
+<<<<<<< HEAD
       </class> <!-- ShopperLogin.ShopperStackAddress -->
+=======
+      </class> <!-- ShopperLogin.DeleteShopperTest -->
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
