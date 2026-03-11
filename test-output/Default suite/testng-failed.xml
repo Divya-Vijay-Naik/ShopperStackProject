@@ -5,6 +5,7 @@
     <classes>
       <class name="ShopperLogin.ShopperStackAddress">
         <methods>
+          <include name="config"/>
           <include name="testGetShopperAddresses_JSON"/>
           <include name="configDB"/>
           <include name="aftersuite"/>

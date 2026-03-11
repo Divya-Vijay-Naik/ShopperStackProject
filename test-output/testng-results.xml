@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-11T11:00:36 IST" name="Default suite" finished-at="2026-03-11T11:00:38 IST" duration-ms="1820">
+  <suite started-at="2026-03-11T11:59:11 IST" name="Default suite" finished-at="2026-03-11T11:59:13 IST" duration-ms="2394">
     <groups>
     </groups>
-    <test started-at="2026-03-11T11:00:36 IST" name="Default test" finished-at="2026-03-11T11:00:38 IST" duration-ms="1820">
+    <test started-at="2026-03-11T11:59:11 IST" name="Default test" finished-at="2026-03-11T11:59:13 IST" duration-ms="2394">
       <class name="ShopperLogin.ShopperStackAddress">
-        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.ShopperStackAddress@3bd82cf5]" started-at="2026-03-11T11:00:36 IST" name="configDB" finished-at="2026-03-11T11:00:36 IST" duration-ms="569" status="PASS">
+        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:10 IST" name="configDB" finished-at="2026-03-11T11:59:11 IST" duration-ms="607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configDB -->
-        <test-method signature="testGetShopperAddresses_JSON()[pri:0, instance:ShopperLogin.ShopperStackAddress@3bd82cf5]" started-at="2026-03-11T11:00:36 IST" name="testGetShopperAddresses_JSON" finished-at="2026-03-11T11:00:38 IST" duration-ms="1767" status="FAIL">
+        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:11 IST" name="config" finished-at="2026-03-11T11:59:11 IST" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method signature="testGetShopperAddresses_JSON()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:11 IST" name="testGetShopperAddresses_JSON" finished-at="2026-03-11T11:59:13 IST" duration-ms="2232" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
@@ -66,7 +70,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetShopperAddresses_JSON -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.ShopperStackAddress@3bd82cf5]" started-at="2026-03-11T11:00:38 IST" name="aftersuite" finished-at="2026-03-11T11:00:38 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.ShopperStackAddress@7770f470]" started-at="2026-03-11T11:59:13 IST" name="aftersuite" finished-at="2026-03-11T11:59:13 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
