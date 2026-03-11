@@ -6,10 +6,7 @@
       <class name="ShopperLogin.CartModuleTest">
         <methods>
           <include name="config"/>
-          <include name="updateCartItem"/>
-          <include name="deleteCartItem"/>
           <include name="configDB"/>
-          <include name="addCartItem"/>
           <include name="aftersuite"/>
           <include name="getCartItems"/>
         </methods>

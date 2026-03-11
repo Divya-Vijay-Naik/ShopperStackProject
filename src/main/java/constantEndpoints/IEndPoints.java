@@ -7,6 +7,8 @@ public interface IEndPoints {
 	public String AddProject="/addProject";
 	public String ShopperCart ="/shoppers/{shopperId}/carts";
 	public String ShopperCartPut="/shoppers/{shopperId}/carts/{itemId}";
+	public String ShopperCartGet="/products";
+	public String ShopperCartDelete="/shoppers/{shopperId}/carts/{productId}";
 
 
 
