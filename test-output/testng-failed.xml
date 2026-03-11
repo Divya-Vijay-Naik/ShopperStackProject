@@ -3,14 +3,29 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="ShopperLogin.ShopperStackProductReview">
+=======
+      <class name="ShopperLogin.CartModuleTest">
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
         <methods>
           <include name="config"/>
+<<<<<<< HEAD
           <include name="AddProductReviewTest"/>
+=======
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
           <include name="configDB"/>
           <include name="aftersuite"/>
+<<<<<<< HEAD
+=======
+          <include name="getCartItems"/>
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
         </methods>
+<<<<<<< HEAD
       </class> <!-- ShopperLogin.ShopperStackProductReview -->
+=======
+      </class> <!-- ShopperLogin.CartModuleTest -->
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

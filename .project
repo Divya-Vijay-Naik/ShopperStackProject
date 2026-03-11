@@ -21,6 +21,7 @@
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	<linkedResources>
 		<link>
@@ -29,5 +30,7 @@
 			<location>C:/ShopperStackFrameWork/testdata/TestData.xlsx</location>
 		</link>
 	</linkedResources>
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+=======
 >>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 </projectDescription>

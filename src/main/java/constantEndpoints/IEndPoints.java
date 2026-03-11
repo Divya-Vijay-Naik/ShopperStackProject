@@ -4,7 +4,12 @@ public interface IEndPoints {
 
 	public String ShopperCart ="/shoppers/{shopperId}/carts";
 	public String ShopperCartPut="/shoppers/{shopperId}/carts/{itemId}";
+<<<<<<< HEAD
 	
+=======
+	public String ShopperCartGet="/products";
+	public String ShopperCartDelete="/shoppers/{shopperId}/carts/{productId}";
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 
 //>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 

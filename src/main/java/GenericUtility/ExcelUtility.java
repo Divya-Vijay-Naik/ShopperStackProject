@@ -13,8 +13,12 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtility {
 
+<<<<<<< HEAD
 	String projectPath = System.getProperty("user.dir");
 	String filepath=projectPath+"/testdata/TestData.xlsx";
+=======
+	String filepath = "src/test/resources/testdata/TestData.xlsx";
+>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 	
 	public String getDataFromExcel(String sheetName, int rowNum, int colNum) throws EncryptedDocumentException, IOException {
 		FileInputStream fileInputStream=new FileInputStream(filepath);
