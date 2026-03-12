@@ -4,12 +4,10 @@ public interface IEndPoints {
 
 	public String ShopperCart ="/shoppers/{shopperId}/carts";
 	public String ShopperCartPut="/shoppers/{shopperId}/carts/{itemId}";
-<<<<<<< HEAD
+
 	
-=======
 	public String ShopperCartGet="/products";
 	public String ShopperCartDelete="/shoppers/{shopperId}/carts/{productId}";
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 
 //>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 
@@ -20,7 +18,8 @@ public interface IEndPoints {
 	public String GetProductReview="/reviews/{productId}";
 	public String AddProductReview="/reviews";
 	public String UpdateProductReview="/reviews/{reviewId}";
-
+	public String GetProduct="/products";
+	public String GetProductAlpha="/products/alpha";
 
 //>>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
 

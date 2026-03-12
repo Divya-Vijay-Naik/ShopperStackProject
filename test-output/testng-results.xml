@@ -1,56 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2026-03-11T16:14:06 IST" name="Default suite" finished-at="2026-03-11T16:14:09 IST" duration-ms="2515">
-=======
-  <suite started-at="2026-03-11T15:06:04 IST" name="Default suite" finished-at="2026-03-11T15:06:15 IST" duration-ms="11777">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+  <suite started-at="2026-03-12T09:49:33 IST" name="Default suite" finished-at="2026-03-12T09:49:35 IST" duration-ms="1641">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test started-at="2026-03-11T16:14:06 IST" name="Default test" finished-at="2026-03-11T16:14:09 IST" duration-ms="2515">
-      <class name="ShopperLogin.ShopperStackProductReview">
-        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.ShopperStackProductReview@6c40365c]" started-at="2026-03-11T16:14:06 IST" name="configDB" finished-at="2026-03-11T16:14:06 IST" duration-ms="524" status="PASS">
-=======
-    <test started-at="2026-03-11T15:06:04 IST" name="Default test" finished-at="2026-03-11T15:06:15 IST" duration-ms="11777">
-      <class name="ShopperLogin.CartModuleTest">
-        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:03 IST" name="configDB" finished-at="2026-03-11T15:06:04 IST" duration-ms="898" status="PASS">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+    <test started-at="2026-03-12T09:49:33 IST" name="Default test" finished-at="2026-03-12T09:49:35 IST" duration-ms="1641">
+      <class name="ShopperLogin.ShopperLoginTest">
+        <test-method is-config="true" signature="configDB()[pri:0, instance:ShopperLogin.ShopperLoginTest@7770f470]" started-at="2026-03-12T09:49:32 IST" name="configDB" finished-at="2026-03-12T09:49:33 IST" duration-ms="787" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configDB -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.ShopperStackProductReview@6c40365c]" started-at="2026-03-11T16:14:06 IST" name="config" finished-at="2026-03-11T16:14:07 IST" duration-ms="99" status="PASS">
-=======
-        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:04 IST" name="config" finished-at="2026-03-11T15:06:04 IST" duration-ms="204" status="PASS">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+        <test-method is-config="true" signature="config()[pri:0, instance:ShopperLogin.ShopperLoginTest@7770f470]" started-at="2026-03-12T09:49:33 IST" name="config" finished-at="2026-03-12T09:49:33 IST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-<<<<<<< HEAD
-        <test-method signature="AddProductReviewTest()[pri:0, instance:ShopperLogin.ShopperStackProductReview@6c40365c]" started-at="2026-03-11T16:14:07 IST" name="AddProductReviewTest" finished-at="2026-03-11T16:14:09 IST" duration-ms="2374" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="shopperLoginTest()[pri:0, instance:ShopperLogin.ShopperLoginTest@7770f470]" started-at="2026-03-12T09:49:33 IST" name="shopperLoginTest" finished-at="2026-03-12T09:49:35 IST" duration-ms="1429" status="FAIL">
+          <exception class="java.net.ConnectException">
             <message>
-              <![CDATA[1 expectation failed.
-Expected status code <200> but was <500>.
-]]>
+              <![CDATA[Connection refused: connect]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <200> but was <500>.
-
+              <![CDATA[java.net.ConnectException: Connection refused: connect
+at java.base/sun.nio.ch.Net.connect0(Native Method)
+at java.base/sun.nio.ch.Net.connect(Net.java:579)
+at java.base/sun.nio.ch.Net.connect(Net.java:568)
+at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+at java.base/java.net.Socket.connect(Socket.java:633)
+at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
 at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
+at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1296)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
 at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)
+at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
 at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
 at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)
-at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at ShopperLogin.ShopperStackProductReview.AddProductReviewTest(ShopperStackProductReview.java:58)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:89)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
+at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
+at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl$_post_closure2.doCall(RequestSpecificationImpl.groovy:180)
+at io.restassured.internal.RequestSpecificationImpl$_post_closure2.doCall(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
+at groovy.lang.Closure.call(Closure.java:471)
+at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
+at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
+at jdk.proxy1/jdk.proxy1.$Proxy17.get(Unknown Source)
+at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
+at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:179)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+at ShopperLogin.ShopperLoginTest.shopperLoginTest(ShopperLoginTest.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,43 +143,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-=======
-        <test-method signature="getProductId()[pri:1, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:04 IST" name="getProductId" finished-at="2026-03-11T15:06:13 IST" duration-ms="8715" status="PASS">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+          </exception> <!-- java.net.ConnectException -->
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- AddProductReviewTest -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.ShopperStackProductReview@6c40365c]" started-at="2026-03-11T16:14:09 IST" name="aftersuite" finished-at="2026-03-11T16:14:09 IST" duration-ms="0" status="PASS">
-=======
-        </test-method> <!-- getProductId -->
-        <test-method signature="addCartItem()[pri:2, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:13 IST" name="addCartItem" finished-at="2026-03-11T15:06:13 IST" duration-ms="802" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCartItem -->
-        <test-method signature="getCartItems()[pri:3, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:13 IST" name="getCartItems" finished-at="2026-03-11T15:06:14 IST" duration-ms="634" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCartItems -->
-        <test-method signature="updateCartItem()[pri:4, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:14 IST" name="updateCartItem" finished-at="2026-03-11T15:06:15 IST" depends-on-methods="ShopperLogin.CartModuleTest.addCartItem" duration-ms="673" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateCartItem -->
-        <test-method signature="deleteCartItem()[pri:5, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:15 IST" name="deleteCartItem" finished-at="2026-03-11T15:06:15 IST" duration-ms="679" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteCartItem -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.CartModuleTest@24313fcc]" started-at="2026-03-11T15:06:15 IST" name="aftersuite" finished-at="2026-03-11T15:06:15 IST" duration-ms="1" status="PASS">
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+        </test-method> <!-- shopperLoginTest -->
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:ShopperLogin.ShopperLoginTest@7770f470]" started-at="2026-03-12T09:49:35 IST" name="aftersuite" finished-at="2026-03-12T09:49:35 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
-<<<<<<< HEAD
-      </class> <!-- ShopperLogin.ShopperStackProductReview -->
-=======
-      </class> <!-- ShopperLogin.CartModuleTest -->
->>>>>>> branch 'SecondBranch' of https://github.com/Divya-Vijay-Naik/ShopperStackProject.git
+      </class> <!-- ShopperLogin.ShopperLoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

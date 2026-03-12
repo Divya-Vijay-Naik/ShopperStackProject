@@ -49,11 +49,13 @@ public class ShopperStackProductReview extends BaseAPIclass {
 
         Response resp = given()
             .spec(spcReqobj)
+            .log().all()
             .queryParam("productId", ProductId)
             .header("Authorization", "Bearer " + token)
             .body(pojo)
             .when()
             .post(IEndPoints.AddProductReview);
+        System.out.println("Error Message from Server: " + resp.asString());
 
         resp.then()
             .assertThat().statusCode(200) // POST should return 201 Created
@@ -84,8 +86,6 @@ public class ShopperStackProductReview extends BaseAPIclass {
                 .spec(spcRespobj)
                 .log().all();
 	}
-	
-	
 	@Test
 	public void DeleteProductReviewTest() throws EncryptedDocumentException, IOException
 	{
