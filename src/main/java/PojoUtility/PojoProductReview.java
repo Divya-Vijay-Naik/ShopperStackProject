@@ -1,75 +1,75 @@
 package PojoUtility;
 
 public class PojoProductReview {
-	    private String dateTime;
-	    private String description;
-	    private String heading;
-	    private int rating;
-	    private int shopperId;
-	    private String shopperName;
+	private String reviewDateTime;    
+    private String reviewDescription; 
+    private String reviewTitle;       
+    private int rating;
+    private int shopperId;
+    private String shopperName;
 
-	    // No-args constructor (needed for deserialization)
-	    public PojoProductReview() {}
+    // No-args constructor
+    public PojoProductReview() {}
 
-	    // All-args constructor
-	    public PojoProductReview(String dateTime, String description, String heading,
-	                  int rating, int shopperId, String shopperName) {
-	        this.dateTime = dateTime;
-	        this.description = description;
-	        this.heading = heading;
-	        this.rating = rating;
-	        this.shopperId = shopperId;
-	        this.shopperName = shopperName;
-	    }
+    // Updated All-args constructor
+    public PojoProductReview(String reviewDateTime, String reviewDescription, String reviewTitle,
+                  int rating, int shopperId, String shopperName) {
+        this.reviewDateTime = reviewDateTime;
+        this.reviewDescription = reviewDescription;
+        this.reviewTitle = reviewTitle;
+        this.rating = rating;
+        this.shopperId = shopperId;
+        this.shopperName = shopperName;
+    }
 
-	    // Getters and Setters
-	    public String getDateTime() {
-	        return dateTime;
-	    }
+    // Updated Getters and Setters
+    public String getReviewDateTime() {
+        return reviewDateTime;
+    }
 
-	    public void setDateTime(String dateTime) {
-	        this.dateTime = dateTime;
-	    }
+    public void setReviewDateTime(String reviewDateTime) {
+        this.reviewDateTime = reviewDateTime;
+    }
 
-	    public String getDescription() {
-	        return description;
-	    }
+    public String getReviewDescription() {
+        return reviewDescription;
+    }
 
-	    public void setDescription(String description) {
-	        this.description = description;
-	    }
+    public void setReviewDescription(String reviewDescription) {
+        this.reviewDescription = reviewDescription;
+    }
 
-	    public String getHeading() {
-	        return heading;
-	    }
+    public String getReviewTitle() {
+        return reviewTitle;
+    }
 
-	    public void setHeading(String heading) {
-	        this.heading = heading;
-	    }
+    public void setReviewTitle(String reviewTitle) {
+        this.reviewTitle = reviewTitle;
+    }
 
-	    public int getRating() {
-	        return rating;
-	    }
+    public int getRating() {
+        return rating;
+    }
 
-	    public void setRating(int rating) {
-	        this.rating = rating;
-	    }
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
 
-	    public int getShopperId() {
-	        return shopperId;
-	    }
+    public int getShopperId() {
+        return shopperId;
+    }
 
-	    public void setShopperId(int shopperId) {
-	        this.shopperId = shopperId;
-	    }
+    public void setShopperId(int shopperId) {
+        this.shopperId = shopperId;
+    }
 
-	    public String getShopperName() {
-	        return shopperName;
-	    }
+    public String getShopperName() {
+        return shopperName;
+    }
 
-	    public void setShopperName(String shopperName) {
-	        this.shopperName = shopperName;
-	    }
+    public void setShopperName(String shopperName) {
+        this.shopperName = shopperName;
+    }
 	}
 
 

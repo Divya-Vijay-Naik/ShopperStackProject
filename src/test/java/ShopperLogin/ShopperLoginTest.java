@@ -13,37 +13,34 @@ import io.restassured.response.Response;
 
 
 public class ShopperLoginTest extends BaseAPIclass {
-	
-	
-	public static String email;
 
     @Test
-    public void shopperLoginTest() throws Throwable
-    {
-    	
-    	LoginPojo body = new LoginPojo(
-    	        "test1773204716877@gmail.com",
-    	        "Password@123",
-    	        "SHOPPER"
-    	);
-   
+    public void shopperLoginTest() throws Throwable {
 
-    	Response res = given()
-    			.relaxedHTTPSValidation()
-    			.contentType(ContentType.JSON)
-    			.body(body)
+        String email = excelUtility.getDataFromExcel("Sheet1",1,9);
+        System.out.println(email);
+        String password = excelUtility.getDataFromExcel("Sheet1",1,6);
+        System.out.println(password);
 
-    			.when()
-    			.post(IEndPoints.LOGIN);
+        LoginPojo body = new LoginPojo(
+                email,
+                password,
+                "SHOPPER"
+        );
+        Response response =
+        given()
+            .spec(spcReqobj)
+            .relaxedHTTPSValidation()
+            .contentType(ContentType.JSON)
+            .body(body)
 
-    			res.then().log().all();
+        .when()
+            .post(IEndPoints.LOGIN)
 
-    			int userId = res.jsonPath().getInt("data.userId");
-    			String jwtToken = res.jsonPath().getString("data.jwtToken");
+        .then()
+            .log().all()
+            .statusCode(200)
+            .extract().response();
 
-    			ExcelUtility eUtil = new ExcelUtility();
-
-    			eUtil.writeDataIntoExcel("Sheet1",1,0,String.valueOf(userId));
-    			eUtil.writeDataIntoExcel("Sheet1",1,1,jwtToken);
     }
 }
