@@ -41,6 +41,17 @@ public class ShopperLoginTest extends BaseAPIclass {
             .log().all()
             .statusCode(200)
             .extract().response();
+        
+        // Capture userId and JWT token
+        int userId = response.jsonPath().getInt("data.userId");
+        String token = response.jsonPath().getString("data.jwtToken");
+
+        System.out.println("UserId: " + userId);
+        System.out.println("JWT Token: " + token);
+
+        // Write values into Excel
+        excelUtility.writeDataIntoExcel("Sheet1",1,0,String.valueOf(userId));
+        excelUtility.writeDataIntoExcel("Sheet1",1,1,token);
+    }
 
     }
-}

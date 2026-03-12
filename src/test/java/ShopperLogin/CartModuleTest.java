@@ -10,7 +10,6 @@ import static io.restassured.RestAssured.given;
 
 public class CartModuleTest extends BaseAPIclass {
 	
-	
 
 	@Test(priority = 1)
 	public void getProductId() throws Throwable {

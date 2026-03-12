@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ShopperLogin.ShopperLoginTest">
+      <class name="ShopperLogin.CartModuleTest">
         <methods>
           <include name="config"/>
-          <include name="shopperLoginTest"/>
+          <include name="updateCartItem"/>
           <include name="configDB"/>
+          <include name="addCartItem"/>
           <include name="aftersuite"/>
         </methods>
-      </class> <!-- ShopperLogin.ShopperLoginTest -->
+      </class> <!-- ShopperLogin.CartModuleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
